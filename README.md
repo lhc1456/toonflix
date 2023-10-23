@@ -2,6 +2,8 @@
 
 A new Flutter project.
 
+nomad coding - 웹툰 앱 만들기
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
