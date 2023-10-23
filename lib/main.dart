@@ -22,17 +22,19 @@ class App extends StatelessWidget {
           padding: EdgeInsets.symmetric(
             horizontal: 40,
           ),
+          // Column은 위 아래로 쌓고 싶을때 사용
           child: Column(
             children: [
               SizedBox(
                 height: 80,
               ),
+              // Row는 옆에 놓고 싶을때 사용
               Row(
-                // MainAxis : Column의 수직방향
+                // MainAxis : Column의 수직방향, Row의 수평방향
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Column(
-                    // // CrossAxis : Column의 수평방향
+                    // // CrossAxis : Column의 수평방향, Row의 수직방향
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       Text(
@@ -46,7 +48,8 @@ class App extends StatelessWidget {
                       Text(
                         'Welcome back',
                         style: TextStyle(
-                          color: Colors.white.withOpacity(0.8),
+                          // color: Colors.white.withOpacity(0.8),
+                          color: Color.fromRGBO(255, 255, 255, 0.8),
                           fontSize: 18,
                         ),
                       ),
