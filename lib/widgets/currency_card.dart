@@ -19,6 +19,7 @@ class CurrencyCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     bool inverted = (order % 2 == 0);
+
     return Transform.translate(
       offset: Offset(0, order > 0 ? (order - 1) * (-20) : 0),
       child: Container(
