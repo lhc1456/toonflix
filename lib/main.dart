@@ -127,6 +127,7 @@ class App extends StatelessWidget {
                 height: 20,
               ),
               Container(
+                clipBehavior: Clip.hardEdge,
                 decoration: const BoxDecoration(
                   color: Color(0xFF1F2123),
                   borderRadius: BorderRadius.all(Radius.circular(20)),
@@ -134,6 +135,7 @@ class App extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(25),
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -169,6 +171,19 @@ class App extends StatelessWidget {
                             ],
                           ),
                         ],
+                      ),
+                      // Transform.scale() : 크기 증가
+                      Transform.scale(
+                        scale: 2.2,
+                        // Transform.translate() : x, y 위치 이동
+                        child: Transform.translate(
+                          offset: const Offset(-5, 15),
+                          child: const Icon(
+                            Icons.euro_rounded,
+                            color: Colors.white,
+                            size: 88,
+                          ),
+                        ),
                       )
                     ],
                   ),
