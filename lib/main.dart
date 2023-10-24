@@ -127,6 +127,7 @@ class App extends StatelessWidget {
                 height: 20,
               ),
               Container(
+                // (clipBehavior: Clip.hardEdge) : overflow 된 내용 잘라내기
                 clipBehavior: Clip.hardEdge,
                 decoration: const BoxDecoration(
                   color: Color(0xFF1F2123),
@@ -172,12 +173,15 @@ class App extends StatelessWidget {
                           ),
                         ],
                       ),
-                      // Transform.scale() : 크기 증가
+                      // Transform.scale(scale) : scale 배수만큼 크기 증가
                       Transform.scale(
                         scale: 2.2,
-                        // Transform.translate() : x, y 위치 이동
+                        // Transform.translate(x, y) : x, y 만큼 위치 이동
                         child: Transform.translate(
-                          offset: const Offset(-5, 15),
+                          offset: const Offset(
+                            -5,
+                            15,
+                          ),
                           child: const Icon(
                             Icons.euro_rounded,
                             color: Colors.white,
