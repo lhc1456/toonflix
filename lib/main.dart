@@ -92,31 +92,87 @@ class App extends StatelessWidget {
                     bgColor: Color(0xFFF1B33B),
                     textColor: Colors.black,
                   ),
-                  // Container(
-                  //   decoration: BoxDecoration(
-                  //     color: const Color(0xFF1F2123),
-                  //     borderRadius: BorderRadius.circular(45),
-                  //   ),
-                  //   child: const Padding(
-                  //     padding: EdgeInsets.symmetric(
-                  //       vertical: 20,
-                  //       horizontal: 50,
-                  //     ),
-                  //     child: Text(
-                  //       'Request',
-                  //       style: TextStyle(
-                  //         color: Colors.white,
-                  //         fontSize: 20,
-                  //       ),
-                  //     ),
-                  //   ),
-                  // )
                   Button(
                     text: 'Request',
                     bgColor: Color(0xFF1F2123),
                     textColor: Colors.white,
                   ),
                 ],
+              ),
+              const SizedBox(
+                height: 100,
+              ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text(
+                    'Wallets',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 36,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  Text(
+                    'View All',
+                    style: TextStyle(
+                      color: Colors.white.withOpacity(0.8),
+                      fontSize: 18,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Container(
+                decoration: const BoxDecoration(
+                  color: Color(0xFF1F2123),
+                  borderRadius: BorderRadius.all(Radius.circular(20)),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(25),
+                  child: Row(
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            'Euro',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 32,
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          Row(
+                            children: [
+                              const Text(
+                                '6 428',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                ),
+                              ),
+                              const SizedBox(
+                                width: 5,
+                              ),
+                              Text(
+                                'EUR',
+                                style: TextStyle(
+                                  color: Colors.white.withOpacity(0.8),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
               ),
             ],
           ),
