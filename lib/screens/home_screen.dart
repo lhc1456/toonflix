@@ -18,7 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
   int totalSeconds = twentyFiveMinutes;
   int totalPomodoros = 0;
   bool isRunning = false;
-  late Timer timer;
+  late Timer timer = Timer(Duration.zero, () {});
 
   void onTick(Timer timer) {
     if (totalSeconds == 0) {
