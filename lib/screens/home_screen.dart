@@ -23,6 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
         isRunning = false;
         totalSeconds = twentyFiveMinutes;
       });
+      timer.cancel()
     } else {
       setState(() {
         totalSeconds = totalSeconds - 1;
@@ -49,10 +50,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
   String format(int seconds) {
     var duration = Duration(seconds: seconds);
-    // print(duration.toString());
-    // print(duration.toString().split("."));
-    // print(duration.toString().split(".").first);
-    // print(duration.toString().split(".").first.substring(2, 7));
     return duration.toString().split(".").first.substring(2, 7);
   }
 
